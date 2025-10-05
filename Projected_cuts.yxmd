@@ -1,0 +1,529 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File />
+          <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="100">
+            <ReadCentroids>False</ReadCentroids>
+            <Query>select * from inventory_1;</Query>
+            <TableStyle>Quoted</TableStyle>
+            <PostSQL />
+            <CacheData>True</CacheData>
+            <Table />
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>False</ReadUncommitted>
+            <Connection DcmType="ConnectionId" DcmTitle="MySQL ODBC — Username" DcmSchemaId="database-odbc-dsn-mysql-nopwd">204df8a6-1bd5-46e1-be52-6cd1f342667a</Connection>
+            <NoProgress>True</NoProgress>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:MySQL ODBC — Username
+Query=select * from inventory_1;</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Date" source="File: select * from inventory_1;" type="Date" />
+            <Field name="Warehouse_ID" size="4" source="File: select * from inventory_1;" type="V_WString" />
+            <Field name="SKU_ID" size="4" source="File: select * from inventory_1;" type="V_WString" />
+            <Field name="SKU_Name" size="10" source="File: select * from inventory_1;" type="V_WString" />
+            <Field name="Opening_Stock" source="File: select * from inventory_1;" type="Int32" />
+            <Field name="Incoming_Qty" source="File: select * from inventory_1;" type="Int32" />
+            <Field name="Sales_Qty" source="File: select * from inventory_1;" type="Int32" />
+            <Field name="Closing_Stock" source="File: select * from inventory_1;" type="Int32" />
+            <Field name="Unit_Cost" scale="2" size="7" source="File: select * from inventory_1;" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="246" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File />
+          <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+            <ReadCentroids>False</ReadCentroids>
+            <Query>select * 
+from `forecast_1`</Query>
+            <TableStyle>Quoted</TableStyle>
+            <PostSQL />
+            <CacheData>True</CacheData>
+            <Table />
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>False</ReadUncommitted>
+            <Connection DcmType="ConnectionId" DcmTitle="MySQL ODBC — Username" DcmSchemaId="database-odbc-dsn-mysql-nopwd">204df8a6-1bd5-46e1-be52-6cd1f342667a</Connection>
+            <NoProgress>True</NoProgress>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:MySQL ODBC — Username
+Query=select * 
+from `forecast_1`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Month" size="7" source="File: select * &#xA;from `forecast_1`" type="V_WString" />
+            <Field name="SKU_ID" size="4" source="File: select * &#xA;from `forecast_1`" type="V_WString" />
+            <Field name="Forecasted_Demand" source="File: select * &#xA;from `forecast_1`" type="Int32" />
+            <Field name="Safety_Stock" source="File: select * &#xA;from `forecast_1`" type="Int32" />
+            <Field name="Recommended_Cut_Pct" source="File: select * &#xA;from `forecast_1`" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="318" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File />
+          <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+            <ReadCentroids>False</ReadCentroids>
+            <Query>select * 
+from `product_master`</Query>
+            <TableStyle>Quoted</TableStyle>
+            <PostSQL />
+            <CacheData>False</CacheData>
+            <Table />
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>False</ReadUncommitted>
+            <Connection DcmType="ConnectionId" DcmTitle="MySQL ODBC — Username" DcmSchemaId="database-odbc-dsn-mysql-nopwd">204df8a6-1bd5-46e1-be52-6cd1f342667a</Connection>
+            <NoProgress>True</NoProgress>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:MySQL ODBC — Username
+Query=select * 
+from `product_mas...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="SKU_ID" size="4" source="File: select * &#xA;from `product_master`" type="V_WString" />
+            <Field name="SKU_Name" size="10" source="File: select * &#xA;from `product_master`" type="V_WString" />
+            <Field name="Category" size="9" source="File: select * &#xA;from `product_master`" type="V_WString" />
+            <Field name="Brand" size="7" source="File: select * &#xA;from `product_master`" type="V_WString" />
+            <Field name="Pack_Size" size="5" source="File: select * &#xA;from `product_master`" type="V_WString" />
+            <Field name="Unit_Cost" scale="2" size="7" source="File: select * &#xA;from `product_master`" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File />
+          <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+            <ReadCentroids>False</ReadCentroids>
+            <Query>select * from purchase_orders ;</Query>
+            <TableStyle>Quoted</TableStyle>
+            <PostSQL />
+            <CacheData>False</CacheData>
+            <Table />
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>False</ReadUncommitted>
+            <Connection DcmType="ConnectionId" DcmTitle="MySQL ODBC — Username" DcmSchemaId="database-odbc-dsn-mysql-nopwd">204df8a6-1bd5-46e1-be52-6cd1f342667a</Connection>
+            <NoProgress>True</NoProgress>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:MySQL ODBC — Username
+Query=select * from purchase_order...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="PO_ID" size="7" source="File: select * from purchase_orders ;" type="V_WString" />
+            <Field name="Date" size="10" source="File: select * from purchase_orders ;" type="V_WString" />
+            <Field name="SKU_ID" size="4" source="File: select * from purchase_orders ;" type="V_WString" />
+            <Field name="Ordered_Qty" source="File: select * from purchase_orders ;" type="Int32" />
+            <Field name="Unit_Cost" scale="2" size="7" source="File: select * from purchase_orders ;" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="186" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ToString(DateTimeYear([Date])) + &quot;-&quot; + PadLeft(ToString(DateTimeMonth([Date])),2,&quot;0&quot;)&#xA;" field="months" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>months = ToString(DateTimeYear([Date])) + "-" + PadLeft(ToString(DateTimeMonth([...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="150" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Incoming_Qty] + [Closing_Stock]&#xA;" field="Available_stock" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="[Sales_Qty] * [Unit_Cost]" field="Sales" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="ToString(DateTimeYear([Date])) + &quot;-&quot; + PadLeft(ToString(DateTimeMonth([Date])),2,&quot;0&quot;)&#xA;" field="Months" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Available_stock = [Incoming_Qty] + [Closing_Stock]
+
+Sales = [Sales_Qty] * [Unit_...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="342" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="SKU_ID" />
+            <Field field="Months" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="SKU_ID" />
+            <Field field="Month" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Date" selected="True" input="Left_" />
+                <SelectField field="Right_Month" selected="True" input="Right_" />
+                <SelectField field="Left_Warehouse_ID" selected="True" input="Left_" />
+                <SelectField field="Left_SKU_ID" selected="True" input="Left_" />
+                <SelectField field="Left_SKU_Name" selected="True" input="Left_" />
+                <SelectField field="Left_Opening_Stock" selected="True" input="Left_" />
+                <SelectField field="Left_Incoming_Qty" selected="True" input="Left_" />
+                <SelectField field="Left_Sales_Qty" selected="True" input="Left_" />
+                <SelectField field="Left_Closing_Stock" selected="True" input="Left_" />
+                <SelectField field="Left_Unit_Cost" selected="True" input="Left_" />
+                <SelectField field="Left_Available_stock" selected="True" input="Left_" />
+                <SelectField field="Right_SKU_ID" selected="False" rename="Right_SKU_ID" input="Right_" />
+                <SelectField field="Right_Forecasted_Demand" selected="True" input="Right_" />
+                <SelectField field="Right_Safety_Stock" selected="True" input="Right_" />
+                <SelectField field="Right_Recommended_Cut_Pct" selected="True" input="Right_" />
+                <SelectField field="Left_Sales" selected="True" input="Left_" />
+                <SelectField field="Left_Months" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="438" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IIF(ToNumber([Forecasted_Demand]) &gt;ToNumber([Available_stock])&#xA;,([Forecasted_Demand] -ToNumber([Available_stock])),0)&#xA;" field="Projected_cuts" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="ToNumber([Projected_cuts]) * ToNumber([Unit_Cost])" field="projected_cuts_cost" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Projected_cuts = IIF(ToNumber([Forecasted_Demand]) &gt;ToNumber([Available_stock])
+...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="558" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date" selected="True" />
+            <SelectField field="Month" selected="True" />
+            <SelectField field="Warehouse_ID" selected="True" />
+            <SelectField field="SKU_ID" selected="True" />
+            <SelectField field="SKU_Name" selected="True" />
+            <SelectField field="Opening_Stock" selected="True" />
+            <SelectField field="Incoming_Qty" selected="True" />
+            <SelectField field="Sales_Qty" selected="True" />
+            <SelectField field="Closing_Stock" selected="True" />
+            <SelectField field="Unit_Cost" selected="True" />
+            <SelectField field="Available_stock" selected="True" type="Int64" size="8" />
+            <SelectField field="Forecasted_Demand" selected="True" type="Int64" size="8" />
+            <SelectField field="Safety_Stock" selected="True" />
+            <SelectField field="Recommended_Cut_Pct" selected="True" type="Int64" size="8" />
+            <SelectField field="Sales" selected="True" type="Double" size="8" />
+            <SelectField field="Projected_cuts" selected="True" type="Double" size="8" />
+            <SelectField field="projected_cuts_cost" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="678" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\Shree\Desktop\Alteryxx_workflows\Projected_cuts_data_pb_1i.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Projected_cuts_data_pb_1i.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="546" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Shree\AppData\Local\Temp\Alteryx\Engine_20616_35bb1b6d1b6341a38f69f1fb2e781fcf_\Engine_20616_36314be321ef4465ac947b9e79edce49~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="342" y="-6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Shree\AppData\Local\Temp\Alteryx\Engine_20616_35bb1b6d1b6341a38f69f1fb2e781fcf_\Engine_20616_e1f8780171624483b0c5f91a2a5a09ed~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="366" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Shree\AppData\Local\Temp\Alteryx\Engine_20616_35bb1b6d1b6341a38f69f1fb2e781fcf_\Engine_20616_d17d96abc37043aaa0bc5c5fc6fdaa40~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="22" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Join" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Join" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Projected_cuts</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="880c0fdd-b72f-4565-9c29-ad87c528bece" />
+      <Telemetry>
+        <PreviousWorkflowId value="893455ee-66c9-4583-9f81-62732f1ce3ce" />
+        <OriginWorkflowId value="893455ee-66c9-4583-9f81-62732f1ce3ce" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
